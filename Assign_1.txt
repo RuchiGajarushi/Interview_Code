@@ -1,0 +1,442 @@
+				ASSIGNMENT - 1
+
+Puzzles:
+1. A man fell in a 50m deep well. He climbs 4 meters up and slips 3 meters down in one day. How many days would it take for him to come out of the well?
+-> A man fall into a 30m. deep well and everyday he climbs 4m. but slips back 3m.
+So in total per day he is climbing 4-3 = 1m.Everyday is like that so is climbing 1m. only.
+After 25 days he will reach 25m.
+At that he will another 1m
+So at 26th day he will be at 26m.
+But on 27th day he has to climb only 4m. to escape.... and I think he can that day... if he could not do that i.e., climb 4m. and slips back 3m. then another day is required
+so 28 days.. is required
+=======================================================================================================================================================================
+2. A man works on the 10-th floor and takes the elevator down to ground level at the end
+of the day. Yet every morning, he only takes the elevator to the 7th floor, even when
+in a hurry. But he goes all the way to the 10-th floor when others are in the elevator
+with him or it is a rainy day. Why?
+->
+he is too short to press 10th button. but when it is rainy he will have umbrella and use umbrella to press 10th floor button.
+=======================================================================================================================================================================
+Average Program Question:
+1. Given an sorted array A of size N. Find the number of elements which are less than or
+equal to given element X.
+Input:
+The first line of input contains an integer T denoting the number of test cases. Then T
+test cases follow. Each test case contains 3 lines of input. The first line contains an
+integer N denoting the size of the array. Then the next line contains N space separated
+integers forming the array. The third line contains an element X.
+Output:
+For each test case, in a new line, print the number of elements which are less than or
+equal to the given element.
+Example:
+Input:
+2
+6
+1 2 4 5 8 10
+9
+7
+1 2 2 2 5 7 9
+2
+Output:
+5
+4
+->
+package ass1;
+
+
+import java.util.ArrayList;
+
+import java.util.Scanner;
+
+
+public class Q1
+{
+
+
+	public static void main(String[] args) 
+	{
+
+		Scanner sc = new Scanner(System.in);
+
+		int T = sc.nextInt();
+	
+		for(int i=0; i<T; i++)
+		{
+			
+			int N = sc.nextInt();
+		
+			ArrayList<Integer> a1 = new ArrayList<>();
+		
+	for(int j=0;j<N;j++)
+ 			{
+
+				int n = sc.nextInt();
+
+				a1.add(n);
+
+			}
+
+			
+int X = sc.nextInt();
+
+			int count = 0;
+
+			for(int j=0;j<N;j++)
+ 			{
+
+				if(a1.get(j) <= X)
+				{
+					
+					count++;
+
+				}
+			
+			}
+			System.out.println(count);
+
+		}
+
+	
+	}
+
+
+}
+=======================================================================================================================================================================
+2. Given an array Arr of size N, print the second largest element from an array.
+Example 1:
+Input:
+N = 6
+Arr[] = {12, 35, 1, 10, 34, 1}
+Output: 34
+ Explanation: The largest element of the
+array is 35 and the second largest element
+is 34.
+->
+package ass1;
+
+
+import java.util.ArrayList;
+
+import java.util.Collections;
+
+import java.util.Scanner;
+
+
+public class Q2
+{
+
+
+	public static void main(String[] args)
+	{
+		
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+	
+		int N = sc.nextInt();
+		
+		ArrayList<Integer> a1 = new ArrayList<Integer>();
+
+		for(int i=0;i<N;i++) 
+		{
+			
+			int n = sc.nextInt();
+
+			a1.add(n);
+
+		}
+		//int max=0;
+		
+//int max1=0;
+		
+//for(int i=0;i<N;i++) 
+		//{
+			
+//for(int j=i;j<N;j++) 
+			//{
+				
+//if(a1.get(i)>a1.get(j)) 
+				//{
+					
+//max1=max;
+					
+//max=a1.get(i);
+
+				//}
+
+			//}
+	
+		//}
+
+		//System.out.println(max);
+
+		Collections.sort(a1);
+	
+		//System.out.println(a1);
+	
+		System.out.println(a1.get(N-2));
+
+	}
+
+
+}
+=======================================================================================================================================================================
+3. Given an array A of size N of integers. Your task is to find the minimum and
+maximum elements in the array.
+Input: The first line of input contains an integer T denoting the number of test cases.
+T test cases follow. Each test case contains 2 lines of input. The first line of each test
+case contains the size of array N. The following line contains elements of the array
+separated by spaces.
+Output:
+For each test case, print the minimum and maximum element of the array.
+Example: Input:
+2
+6
+3 2 1 56 10000 167
+5
+1 345 234 21 56789
+Output:
+1 10000
+1 56789
+->
+package ass1;
+
+
+import java.util.ArrayList;
+
+import java.util.Collections;
+
+import java.util.Scanner;
+
+
+public class Q3 
+{
+
+	public static void main(String[] args)
+	{
+
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		
+		int x=sc.nextInt();
+	
+		for(int i=0;i<x;i++) 
+		{
+			
+			int N = sc.nextInt();
+
+			ArrayList<Integer> a1 = new ArrayList<Integer>();
+
+			for(int j=0;j<N;j++)
+			{
+				
+				int n = sc.nextInt();
+		
+				a1.add(n);
+	
+		}
+
+
+			Collections.sort(a1);
+
+			
+System.out.println(a1.get(0)+" "+a1.get(N-1));
+
+		}
+
+	}
+
+}
+=======================================================================================================================================================================
+4. Given an integer array A of size N, find the sum of elements in it.
+Input: First line contains an integer denoting the test cases 'T'. T test cases follow.
+Each test case contains two lines of input. First line contains N the size of the array A.
+The second line contains the elements of the array.
+Output: For each test case, print the sum of all elements of the array in separate lines.
+ Example:Input:
+2
+3
+3 2 1
+4
+1 2 3 4
+Output:
+6
+10
+-> 
+package ass1;
+
+
+import java.util.ArrayList;
+
+import java.util.Scanner;
+
+public class Q4 
+{
+
+
+	public static void main(String[] args) 
+	{
+
+		Scanner sc = new Scanner(System.in);
+	
+		int x=sc.nextInt();
+
+		for(int i=0;i<x;i++)
+		{
+			
+			int N = sc.nextInt();
+
+			ArrayList<Integer> a1 = new ArrayList<Integer>();
+
+			for(int j=0;j<N;j++)
+			{
+
+				int n = sc.nextInt();
+		
+				a1.add(n);
+
+			}
+		
+			int sum=0;
+
+			for(int j=0;j<N;j++) 
+			{
+
+				sum+=a1.get(j);
+			
+			}
+
+
+			System.out.println(sum);
+
+		}
+
+
+
+	}
+
+
+}
+=======================================================================================================================================================================
+5. Given an array A of size N, print the reverse of it.
+Input: First line contains an integer denoting the test cases 'T'. T test cases follow.
+Each test case contains two lines of input. First line contains N the size of the array A.
+The second line contains the elements of the array.
+Output: For each test case, in a new line, print the array in reverse order.
+Example:
+Input:
+1
+4
+1 2 3 4
+Output:
+4 3 2 1
+->
+package ass1;
+
+import java.util.ArrayList;
+
+import java.util.Collections;
+
+import java.util.Scanner;
+
+
+public class Q5 
+{
+
+
+	public static void main(String[] args)
+ 	{
+
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+
+		int x=sc.nextInt();
+
+		for(int i=0;i<x;i++)
+		 {
+			
+			int N = sc.nextInt();
+
+			ArrayList<Integer> a1 = new ArrayList<Integer>();
+
+			for(int j=0;j<N;j++) 
+			{
+				
+				int n = sc.nextInt();
+
+				a1.add(n);
+
+			}
+		
+			Collections.sort(a1);
+
+			for(int j=N-1;j>=0;j--)
+			{
+				
+				System.out.print(a1.get(j)+" ");
+
+			}
+		
+		}
+	
+}
+
+
+}
+=======================================================================================================================================================================
+Difficult Question:
+1. Given a N x N matrix M. Write a program to find the count of all the
+distinct elements common to all rows of the matrix. Print count of such
+elements.
+Example 1: Input: N = 4
+M = {{2, 1, 4, 3},
+ {1, 2, 3, 2},
+ {3, 6, 2, 3},
+ {5, 2, 5, 3}}
+Output: 2
+Explanation: Only 2 and 3 are common in all rows.
+Example 2: Input: N = 5
+M = {{12, 1, 14, 3, 16},
+ {14, 2, 1, 3, 35},
+ {14, 1, 14, 3, 11},
+ {14, 5, 3, 2, 1},
+ {1, 18, 3, 21, 14}}
+Output: 3
+Explanation: 14, 3 and 1 are common in all the rows.
+2. Given two linked lists, your task is to complete the function makeUnion(),
+that returns the union of two linked lists. This union should include all the
+distinct elements only.Example 1:
+Input:
+L1 = 9->6->4->2->3->8
+L2 = 1->2->8->6->2
+Output: 1 2 3 4 6 8 9
+3. Given a set of N nuts of different sizes and N bolts of different sizes. There
+is a one-one mapping between nuts and bolts. Match nuts and bolts
+efficiently.
+Comparison of a nut to another nut or a bolt to another bolt is not
+allowed. It means nut can only be compared with bolt and bolt can only
+be compared with nut to see which one is bigger/smaller.
+The elements should follow the following order ! # $ % & * @ ^ ~ .
+Example 1:
+Input:
+N = 5
+nuts[] = {@, %, $, #, ^}
+bolts[] = {%, @, #, $ ^}
+Output:
+# $ % @ ^
+# $ % @ ^
+Example 2:
+Input:
+N = 9
+nuts[] = {^, &, %, @, #, *, $, ~, !}
+bolts[] = {~, #, @, %, &, *, $ ,^, !}
+Output:
+! # $ % & * @ ^ ~
+! # $ % & * @ ^ ~
+Your Task:
+You don't need to read input or print anything. Your task is to complete
+the function matchPairs() which takes an array of characters nuts[],
+bolts[] and n as parameters and returns void. You need to change the
+array itself.
